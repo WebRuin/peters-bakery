@@ -1,11 +1,14 @@
 :root {
   --white: #fff;
+  --white_50: rgba(255, 255, 255, 0.5);
   --pink: rgba(217, 156, 184, 1);
   --hotPink: rgb(187, 0, 105);
   --teal: rgba(4, 191, 173, 1);
+  --teal_75: rgba(4, 191, 173, 0.75);
   --darkTeal: rgb(27, 123, 114);
   --gold: rgba(242, 171, 39, 1);
   --peach: rgba(242, 102, 102, 1);
   --grey: rgba(62, 68, 75, 1);
-  --darkGrey rgba(26, 36, 35, 1)
+  --darkGrey: rgba(26, 36, 35, 1);
+  --darkGrey_25: rgba(26, 36, 35, 0.25);
 }

@@ -1,3 +1,7 @@
+<script>
+  import H1 from "../components/H1.svelte";
+</script>
+
 <style>
   .page-wrapper {
     width: calc(100% - 80px);
@@ -11,4 +15,6 @@
   <title>Peter's Bakerey 🍩 Brownies, Date Bars & Cupcakes</title>
 </svelte:head>
 
-<section class="page-wrapper" />
+<section class="page-wrapper">
+  <H1>Brownies, Date Bars & Cupcakes</H1>
+</section>

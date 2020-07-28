@@ -6,23 +6,14 @@
 </script>
 
 <style>
-  .wrapper {
-    position: relative;
-  }
   main {
     position: relative;
-    background-color: var(--darkGrey);
-    box-sizing: border-box;
-    width: calc(100% - 450px);
-    margin-left: auto;
   }
 </style>
 
-<div class="wrapper">
-  <Nav {segment} />
+<Nav {segment} />
 
-  <main>
-    <Header {segment} />
-    <slot />
-  </main>
-</div>
+<main>
+  <Header {segment} />
+  <slot />
+</main>
