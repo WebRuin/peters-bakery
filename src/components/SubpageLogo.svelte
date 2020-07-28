@@ -7,9 +7,9 @@
     height: 150px;
     border-radius: 50%;
     color: var(--darkTeal);
-    border: 2px solid var(--white);
-    box-shadow: 0 0 0 5px var(--hotPink), 0 0 0 10px var(--teal),
-      0 0 0 15px var(--white);
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 3px var(--hotPink), 0 0 0 6px var(--teal),
+      0 0 0 9px var(--white);
     margin-top: -75px;
     margin-left: -75px;
     align-items: center;

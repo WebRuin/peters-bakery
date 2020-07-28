@@ -19,6 +19,15 @@
   img {
     width: 100%;
   }
+  @media (max-width: 1000px) {
+    header {
+      border-bottom: 8px solid var(--gold) !important;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
 </style>
 
 {#if segment === undefined}

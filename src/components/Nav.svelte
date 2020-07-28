@@ -12,11 +12,12 @@
   nav {
     position: fixed;
     width: 450px;
-    height: 100vh;
+    height: 100%;
     left: -450px;
-    background-color: var(--grey);
+    background: inherit;
     font-weight: 300;
-    border-right: 4px solid var(--white);
+    background-color: var(--darkTeal_75);
+    border-right: 4px solid var(--hotPink);
     z-index: 999;
   }
   .open {
@@ -32,6 +33,7 @@
     color: var(--white);
   }
   ul {
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -44,18 +46,19 @@
   }
   [aria-current] {
     position: relative;
-    color: var(--gold);
+    color: var(--white);
     font-weight: bold;
-    background-color: var(--darkTeal);
+    background-color: var(--hotPink);
   }
   [aria-current]::before {
     position: absolute;
     display: block;
     content: "🧁";
     width: calc(100% - 1em);
-    height: 2px;
+    height: 28px;
     left: -190px;
-    top: 22px;
+    top: 50%;
+    margin-top: -14px;
   }
   button.link {
     width: 100%;
@@ -77,6 +80,31 @@
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.25rem;
+  }
+
+  @media (max-width: 1000px) {
+    nav {
+      position: absolute;
+    }
+    ul {
+      height: auto;
+    }
+    .navButton {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+    }
+    .navButton svg {
+      width: 1rem !important;
+      width: auto;
+      background-size: cover;
+    }
+    nav {
+      width: 100vw;
+    }
+    a {
+      font-size: 1rem;
+    }
   }
 </style>
 

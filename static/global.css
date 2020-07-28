@@ -81,6 +81,35 @@ button {
   outline: none;
   user-select: none;
 }
+ul {
+  margin-left: -2rem;
+}
+ul ul {
+  padding: 0;
+  margin: 0.25rem 0;
+}
+ul ul li {
+  list-style: disc;
+  margin-left: 2.5rem;
+}
+li {
+  list-style: none;
+  color: var(--darkTeal);
+}
+
+@media (max-width: 1000px) {
+  /* ul {
+    width: 80%;
+    margin: 0;
+    padding: 10px;
+  } */
+  ul ul {
+    padding: 0;
+  }
+  ul ul li {
+    margin-left: 10px;
+  }
+}
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
