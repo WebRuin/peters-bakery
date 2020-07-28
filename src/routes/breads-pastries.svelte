@@ -25,7 +25,7 @@
 
 <PageWrapper
   title="Breads & Pastries"
-  image="./bread.png"
+  image="https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595917680/peters-bakery/bread.png"
   altText="A picture of bread">
   <div>
     <h2>Breads</h2>

@@ -33,18 +33,14 @@
 {#if segment === undefined}
   <header>
     <img
-      srcset="doughnut-600.png 600w, doughnut-800.png 800w, doughnut.png 1200w,
-      doughnut-1600.png 1600w"
-      src="doughnut.png"
+      src="https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595917525/peters-bakery/doughnut-1600.png"
       alt="Sprinkled Doughnuts" />
     <Logo />
   </header>
 {:else}
   <header class="subpage">
     <img
-      srcset="doughnut-600.png 600w, doughnut-800.png 800w, doughnut.png 1200w,
-      doughnut-1600.png 1600w"
-      src="doughnut.png"
+      src="https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595917525/peters-bakery/doughnut-1600.png"
       alt="Sprinkled Doughnuts" />
     <SubpageLogo />
   </header>
