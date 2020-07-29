@@ -16,7 +16,7 @@
     left: -450px;
     background: inherit;
     font-weight: 300;
-    background-color: var(--darkTeal_75);
+    background-color: var(--darkTeal_95);
     border-right: 4px solid var(--hotPink);
     z-index: 999;
   }
@@ -29,8 +29,8 @@
     width: 50px;
     height: 50px;
     font-size: 2.5rem;
-    background-color: var(--darkGrey_25);
-    color: var(--white);
+    background-color: var(--gold);
+    color: var(--hotPink);
   }
   ul {
     width: 100%;

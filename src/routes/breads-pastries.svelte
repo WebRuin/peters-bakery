@@ -1,34 +1,35 @@
 <script>
+  import H2 from "../components/H2.svelte";
   import PageWrapper from "../components/PageWrapper.svelte";
-</script>
+  import Aside from "../components/Aside.svelte";
 
-<style>
-  h2 {
-    position: relative;
-    color: var(--peach);
-    margin-bottom: 10px;
-  }
-  h2::after {
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    content: "";
-    height: 4px;
-    width: 100%;
-    background-color: var(--grey);
-  }
-</style>
+  const images = [
+    {
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595917680/peters-bakery/bread.png",
+      name: "Cinnamon Nut Bread"
+    },
+    {
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595957962/peters-bakery/Screenshot_2020-07-28_menu_pdf_18.png",
+      name: "Strawberry Ring"
+    },
+    {
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595957500/peters-bakery/Screenshot_2020-07-28_menu_pdf.png",
+      name: "Éclairs"
+    }
+  ];
+</script>
 
 <svelte:head>
   <title>Peter's Bakerey 🍩 Breads & Pastries</title>
 </svelte:head>
 
-<PageWrapper
-  title="Breads & Pastries"
-  image="https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595917680/peters-bakery/bread.png"
-  altText="A picture of bread">
+<PageWrapper title="Breads & Pastries">
+  <Aside {images} />
   <div>
-    <h2>Breads</h2>
+    <H2>Breads</H2>
     <ul>
       <li>Almond Poppy Seed Loaf</li>
       <li>Banana Nut Bread</li>
@@ -43,7 +44,7 @@
     </ul>
   </div>
   <div>
-    <h2>Pasties</h2>
+    <H2>Pasties</H2>
     <ul>
       <li>
         Muffins
@@ -67,6 +68,14 @@
       <li>Apple Turnovers</li>
       <li>Cinnamon Squares</li>
       <li>Croissants</li>
+    </ul>
+    <H2>Whipped Cream Pastries</H2>
+    <ul>
+      <li>Apple Turn Over</li>
+      <li>Cream Horns</li>
+      <li>Cream Puffs</li>
+      <li>Éclairs (Whipped Cream or Custard)</li>
+      <li>Tarts</li>
     </ul>
   </div>
 </PageWrapper>

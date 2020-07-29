@@ -1,8 +1,8 @@
 <style>
   .grid {
-    padding: 4rem;
+    padding: 1rem 3rem;
     display: grid;
-    grid-gap: 4rem;
+    grid-gap: 3rem;
     grid-template-columns: repeat(3, 1fr);
   }
   @media (max-width: 1000px) {
