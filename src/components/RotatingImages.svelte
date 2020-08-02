@@ -1,36 +1,49 @@
 <script>
   import { onMount } from "svelte";
+
+  // Props
   export let images;
   export let speed;
 
   const pictures = images;
-  let src = pictures[pictures.length - 1].src;
-  let name = pictures[pictures.length - 1].name;
+
+  let src = images[images.length - 1].src;
+  let name = images[images.length - 1].name;
   let count = 0;
 
   console.log();
 
-  const rotateImages = pictures => {
-    src = pictures[count].src;
-    name = pictures[count].name;
+  function rotateImages(images) {
+    src = images[count].src;
+    name = images[count].name;
     count = count + 1;
-    if (count >= pictures.length) count = 0;
-  };
+    if (count >= images.length) count = 0;
+  }
 
-  setInterval(rotateImages, speed, pictures);
+  setInterval(rotateImages, speed, images);
 </script>
 
 <style>
   figure {
-    max-width: 80%;
-    margin: 0 auto;
     overflow: hidden;
+    margin-left: -43px;
+  }
+  figcaption {
+    width: 100%;
+    display: grid;
+    font-size: 2.5rem;
+    justify-content: center;
+    color: var(--white);
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-shadow: 2px 2px 0 var(--darkTeal), 4px 4px 0 var(--gold);
+    font-family: "Pacifico", cursive;
   }
   img {
     width: 200%;
   }
   img:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
   }
   @media (max-width: 1000px) {
     figure {
@@ -44,6 +57,6 @@
 </style>
 
 <figure>
-  <img {src} alt="" `A picture of {name} ` />
+  <img {src} alt="A picture of {name}" />
   <figcaption>{name}</figcaption>
 </figure>

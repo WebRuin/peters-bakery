@@ -4,15 +4,16 @@
   import Grid from "../components/Grid.svelte";
 
   export let title;
+  export let wrap;
 </script>
 
 <style>
   .page-wrapper {
     width: calc(100% - 80px);
     min-height: 500px;
-    margin: 40px auto;
+    margin: 40px auto 1rem auto;
     background-color: var(--white);
-    font-size: 2rem;
+    /* font-size: 2rem; */
   }
   @media (max-width: 1000px) {
     .page-wrapper {
@@ -21,14 +22,14 @@
       margin-bottom: -1rem;
       padding: 1rem;
       padding-top: 2rem;
-      font-size: 1rem;
+      /* font-size: 1rem; */
     }
   }
 </style>
 
 <article class="page-wrapper">
   <H1>{title}</H1>
-  <Grid>
+  <Grid {wrap}>
     <slot />
   </Grid>
 </article>

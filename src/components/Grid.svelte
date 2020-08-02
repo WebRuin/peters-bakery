@@ -1,9 +1,14 @@
+<script>
+  export let wrap;
+</script>
+
 <style>
   .grid {
-    padding: 1rem 3rem;
-    display: grid;
-    grid-gap: 3rem;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    min-height: 500px;
+    padding: 1rem 250px 1em 500px;
   }
   @media (max-width: 1000px) {
     .grid {
@@ -14,6 +19,6 @@
   }
 </style>
 
-<div class="grid">
+<div class="grid {wrap ? 'wrap' : ''}">
   <slot />
 </div>

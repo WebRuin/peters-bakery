@@ -44,7 +44,7 @@
     </ul>
   </div>
   <div>
-    <H2>Pasties</H2>
+    <H2>Pastries</H2>
     <ul>
       <li>
         Muffins

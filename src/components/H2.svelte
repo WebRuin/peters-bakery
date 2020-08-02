@@ -1,14 +1,10 @@
 <style>
   h2 {
+    margin-top: -3rem;
     color: var(--gold);
-    font-size: 2.25rem;
     font-family: "Pacifico", cursive;
-    margin-bottom: -1rem;
-  }
-  @media (max-width: 1000px) {
-    h2 {
-      font-size: 1.5rem;
-    }
+    text-transform: capitalize;
+    text-shadow: 3px 3px 0 var(--hotPink), 6px 6px 0 var(--teal);
   }
 </style>
 

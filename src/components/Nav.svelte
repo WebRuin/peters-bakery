@@ -18,7 +18,7 @@
     font-weight: 300;
     background-color: var(--darkTeal_95);
     border-right: 4px solid var(--hotPink);
-    z-index: 999;
+    z-index: 9999999;
   }
   .open {
     left: 0;
@@ -26,8 +26,8 @@
   .navButton {
     position: absolute;
     left: 450px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 2.5rem;
     background-color: var(--gold);
     color: var(--hotPink);
@@ -113,44 +113,35 @@
   <button class="navButton" on:click={toggleNav}>
     {#if openOpen == true}
       <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="far"
-        data-icon="times-circle"
-        class="svg-inline--fa fa-times-circle fa-w-16"
-        role="img"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512">
-        <path
-          fill="currentColor"
-          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256
-          8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200
-          200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3
-          0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7
-          4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3
-          0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7
-          12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7
-          4.7 4.7 12.3 0 17z" />
+        class="icon icon-tabler icon-tabler-circle-x"
+        width="44"
+        height="44"
+        viewBox="0 0 24 24"
+        stroke-width="2.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" />
+        <circle cx="12" cy="12" r="9" />
+        <path d="M10 10l4 4m0 -4l-4 4" />
       </svg>
     {:else}
       <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fas"
-        data-icon="bars"
-        class="svg-inline--fa fa-bars fa-w-14"
-        role="img"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512">
-        <path
-          fill="currentColor"
-          d="M16 132h416c8.837 0 16-7.163
-          16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837
-          7.163 16 16 16zm0 160h416c8.837 0 16-7.163
-          16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837
-          7.163 16 16 16zm0 160h416c8.837 0 16-7.163
-          16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837
-          7.163 16 16 16z" />
+        class="icon icon-tabler icon-tabler-menu"
+        width="44"
+        height="44"
+        viewBox="0 0 24 24"
+        stroke-width="2.5"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" />
+        <line x1="4" y1="8" x2="20" y2="8" />
+        <line x1="4" y1="16" x2="20" y2="16" />
       </svg>
     {/if}
   </button>
@@ -192,18 +183,9 @@
     <li>
       <button on:click={toggleNav} class="link">
         <a
-          aria-current={segment === 'coffee_cakes' ? 'page' : undefined}
-          href="coffee_cakes">
-          coffee cakes
-        </a>
-      </button>
-    </li>
-    <li>
-      <button on:click={toggleNav} class="link">
-        <a
-          aria-current={segment === 'cookies' ? 'page' : undefined}
-          href="cookies">
-          cookies
+          aria-current={segment === 'coffee-cakes_cookies' ? 'page' : undefined}
+          href="coffee-cakes_cookies">
+          coffee cakes & cookies
         </a>
       </button>
     </li>
