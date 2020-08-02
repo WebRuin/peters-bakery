@@ -5,19 +5,16 @@
 
   const images = [
     {
-      src:
-        "https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595917680/peters-bakery/bread.png",
-      name: "Cinnamon Nut Bread"
+      cloud_name: "walnut_nutbread",
+      public_id: "walnut_nutbread"
     },
     {
-      src:
-        "https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595957962/peters-bakery/Screenshot_2020-07-28_menu_pdf_18.png",
-      name: "Strawberry Ring"
+      cloud_name: "filled_eclair",
+      public_id: "filled_eclair"
     },
     {
-      src:
-        "https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595957500/peters-bakery/Screenshot_2020-07-28_menu_pdf.png",
-      name: "Éclairs"
+      cloud_name: "spiced_bread",
+      public_id: "spiced_bread"
     }
   ];
 </script>

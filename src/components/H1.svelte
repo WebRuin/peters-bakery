@@ -3,9 +3,9 @@
     position: relative;
     z-index: 99999;
     text-align: center;
-    color: var(--hotPink);
+    color: var(--teal);
     font-family: "Pacifico", cursive;
-    text-shadow: 3px 3px 0 var(--teal), 6px 6px 0 var(--teal);
+    text-shadow: 3px 3px 0 var(--darkerTeal), 6px 6px 0 var(--darkPink);
   }
   @media (max-width: 1000px) {
     h1 {

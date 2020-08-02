@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import { Image } from "@cloudinary/svelte";
 
   // Props
   export let images;
@@ -8,15 +7,15 @@
 
   const pictures = images;
 
-  let cloud_name = images[images.length - 1].cloud_name;
-  let public_id = images[images.length - 1].public_id;
+  let src = images[images.length - 1].src;
+  let name = images[images.length - 1].name;
   let count = 0;
 
   console.log();
 
   function rotateImages(images) {
-    cloud_name = images[count].cloud_name;
-    public_id = images[count].public_id;
+    src = images[count].src;
+    name = images[count].name;
     count = count + 1;
     if (count >= images.length) count = 0;
   }
@@ -62,5 +61,7 @@
   }
 </style>
 
-<Image
-  transformation={[{ width: 600, height: 600, crop: 'fill', effect: 'auto_saturation' }, { width: 500, height: 500, crop: 'fill', effect: 'auto-saturation' }]} />
+<figure>
+  <img {src} alt="A picture of {name}" />
+  <figcaption>{name}</figcaption>
+</figure>

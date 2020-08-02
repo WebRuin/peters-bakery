@@ -13,8 +13,8 @@
   @media (max-width: 1000px) {
     .grid {
       padding: 0;
-      grid-gap: 0;
-      grid-template-columns: 1fr;
+      gap: 0;
+      flex-wrap: wrap;
     }
   }
 </style>

@@ -23,9 +23,12 @@
   .open {
     left: 0;
   }
-  .navButton {
-    position: absolute;
+  .open > .navButton {
     left: 450px;
+  }
+  .navButton {
+    position: fixed;
+    left: 0;
     width: 40px;
     height: 40px;
     font-size: 2.5rem;
@@ -90,7 +93,6 @@
       height: auto;
     }
     .navButton {
-      position: absolute;
       width: 2rem;
       height: 2rem;
     }
@@ -100,7 +102,7 @@
       background-size: cover;
     }
     nav {
-      width: 100vw;
+      width: 450px;
     }
     a {
       font-size: 1rem;
