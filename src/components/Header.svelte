@@ -1,47 +1,40 @@
 <script>
-  import Logo from "../components/Logo.svelte";
-  import SubpageLogo from "../components/SubpageLogo.svelte";
+  import RotatingImages from "../components/RotatingImages.svelte";
 
-  export let segment;
+  const images = [
+    {
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/c_fill,g_auto,h_500,w_2800/b_rgb:020202,e_gradient_fade,y_0.40/c_scale,co_rgb:ffffff,fl_relative,w_0.5,y_0.18/v1596475793/peters-bakery/storefront2_xgkol6.jpg"
+    },
+    {
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/c_fill,g_auto,h_500,w_2800/b_rgb:020202,e_gradient_fade,y_0.40/c_scale,co_rgb:ffffff,fl_relative,w_0.5,y_0.18/v1596475793/peters-bakery/peters-bakery_2_cptcp3.jpg"
+    },
+    {
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/c_fill,g_auto,h_500,w_2800/b_rgb:020202,e_gradient_fade,y_0.40/c_scale,co_rgb:ffffff,fl_relative,w_0.5,y_0.18/v1596475793/peters-bakery/storefront_gfnhaa.jpg"
+    },
+    {
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/c_fill,g_auto,h_500,w_2800/b_rgb:020202,e_gradient_fade,y_0.40/c_scale,co_rgb:ffffff,fl_relative,w_0.5,y_0.18/v1596475793/peters-bakery/store_rz5yik.jpg"
+    }
+  ];
 </script>
 
 <style>
   header {
     position: relative;
-    height: 475px;
+    height: 350px;
     overflow: hidden;
-    border-bottom: 30px solid var(--gold);
-  }
-  header.subpage {
-    height: 237.5px;
-    border-bottom: 15px solid var(--gold);
-  }
-  img {
-    width: 100%;
+    border-bottom: 5px solid var(--gold);
   }
   @media (max-width: 1000px) {
     header {
-      border-bottom: 8px solid var(--gold) !important;
-    }
-
-    img {
-      height: 100%;
+      border-bottom: 4px solid var(--gold) !important;
     }
   }
 </style>
 
-{#if segment === undefined}
-  <header>
-    <img
-      src="https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595917525/peters-bakery/doughnut-1600.png"
-      alt="Sprinkled Doughnuts" />
-    <Logo />
-  </header>
-{:else}
-  <header class="subpage">
-    <img
-      src="https://res.cloudinary.com/tihos/image/upload/f_auto,q_auto/v1595917525/peters-bakery/doughnut-1600.png"
-      alt="Sprinkled Doughnuts" />
-    <SubpageLogo />
-  </header>
-{/if}
+<header>
+  <RotatingImages {images} speed={3000} />
+</header>

@@ -1,7 +1,10 @@
 <script>
+  import Logo from "../components/Logo.svelte";
+  import SubpageLogo from "../components/SubpageLogo.svelte";
   import RotatingImages from "../components/RotatingImages.svelte";
 
   export let images;
+  export let segment;
 </script>
 
 <style>
@@ -19,11 +22,17 @@
       padding-top: 424px;
       padding-left: 43px;
       background-color: var(--hotPink_75);
-      border-right: 3px solid var(--darkerTeal);
+      border-left: 3px solid var(--teal);
+      border-right: 3px solid var(--teal);
     }
   }
 </style>
 
 <aside>
+  {#if segment === undefined}
+    <Logo />
+  {:else}
+    <SubpageLogo />
+  {/if}
   <RotatingImages {images} speed={3000} />
 </aside>

@@ -1,4 +1,7 @@
 <script>
+  import Icon from "svelte-awesome";
+  import { faTimesCircle } from "@fortawesome/free-regular-svg-icons";
+  import { faBars } from "@fortawesome/free-solid-svg-icons";
   export let segment;
 
   let openOpen = false;
@@ -33,7 +36,8 @@
     height: 40px;
     font-size: 2.5rem;
     background-color: var(--gold);
-    color: var(--hotPink);
+    color: var(--darkerTeal);
+    z-index: 999;
   }
   ul {
     width: 100%;
@@ -93,13 +97,12 @@
       height: auto;
     }
     .navButton {
-      width: 2rem;
-      height: 2rem;
-    }
-    .navButton svg {
-      width: 1rem !important;
-      width: auto;
-      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 450px;
+      max-width: 30px;
+      height: 30px;
+      z-index: 99;
     }
     nav {
       width: 450px;
@@ -114,37 +117,9 @@
 
   <button class="navButton" on:click={toggleNav}>
     {#if openOpen == true}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-circle-x"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="2.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" />
-        <circle cx="12" cy="12" r="9" />
-        <path d="M10 10l4 4m0 -4l-4 4" />
-      </svg>
+      <Icon scale="3" data={faTimesCircle} flip="horizontal" />
     {:else}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-menu"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="2.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" />
-        <line x1="4" y1="8" x2="20" y2="8" />
-        <line x1="4" y1="16" x2="20" y2="16" />
-      </svg>
+      <Icon scale="2" data={faBars} flip="horizontal" />
     {/if}
   </button>
   <ul>

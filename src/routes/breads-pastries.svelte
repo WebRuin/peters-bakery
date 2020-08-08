@@ -5,16 +5,16 @@
 
   const images = [
     {
-      cloud_name: "walnut_nutbread",
-      public_id: "walnut_nutbread"
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/c_fill,e_auto_saturation,f_auto,h_500,q_auto,w_500/v1596346938/peters-bakery/walnut_nutbread.jpg"
     },
     {
-      cloud_name: "filled_eclair",
-      public_id: "filled_eclair"
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/c_fill,e_auto_saturation,f_auto,h_500,q_auto,w_500/v1596346938/peters-bakery/filled_eclair.jpg"
     },
     {
-      cloud_name: "spiced_bread",
-      public_id: "spiced_bread"
+      src:
+        "https://res.cloudinary.com/tihos/image/upload/c_fill,e_auto_saturation,f_auto,h_500,q_auto,w_500/v1596346938/peters-bakery/spiced_bread.jpg"
     }
   ];
 </script>

@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import { Image } from "@cloudinary/svelte";
 
   // Props
   export let images;
@@ -8,15 +7,12 @@
 
   const pictures = images;
 
-  let cloud_name = images[images.length - 1].cloud_name;
-  let public_id = images[images.length - 1].public_id;
+  const cloud_name = "tihos";
+  let src = images[images.length - 1].src;
   let count = 0;
 
-  console.log();
-
   function rotateImages(images) {
-    cloud_name = images[count].cloud_name;
-    public_id = images[count].public_id;
+    src = images[count].src;
     count = count + 1;
     if (count >= images.length) count = 0;
   }
@@ -29,17 +25,7 @@
     overflow: hidden;
     margin-left: -43px;
   }
-  figcaption {
-    width: 100%;
-    display: grid;
-    font-size: 2.5rem;
-    justify-content: center;
-    color: var(--white);
-    margin-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    text-shadow: 2px 2px 0 var(--darkTeal), 4px 4px 0 var(--gold);
-    font-family: "Pacifico", cursive;
-  }
+
   img {
     width: 200%;
   }
@@ -51,10 +37,6 @@
       margin-top: 0;
       margin: 0 auto;
     }
-    figcaption {
-      color: var(--hotPink);
-      font-size: 1.5rem;
-    }
     img {
       max-width: 100%;
       height: auto;
@@ -62,5 +44,6 @@
   }
 </style>
 
-<Image
-  transformation={[{ width: 600, height: 600, crop: 'fill', effect: 'auto_saturation' }, { width: 500, height: 500, crop: 'fill', effect: 'auto-saturation' }]} />
+<figure>
+  <img {src} alt="" />
+</figure>

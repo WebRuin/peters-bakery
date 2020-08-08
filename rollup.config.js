@@ -19,7 +19,7 @@ const onwarn = (warning, onwarn) =>
 export default {
   client: {
     input: config.client.input(),
-    output: config.client.output("auto"),
+    output: config.client.output(),
     plugins: [
       replace({
         "process.browser": true,
@@ -27,7 +27,6 @@ export default {
       }),
       svelte({
         dev,
-        generate: "ssr",
         hydratable: true,
         emitCss: true,
       }),
@@ -35,7 +34,6 @@ export default {
         browser: true,
         dedupe: ["svelte"],
       }),
-
       commonjs(),
 
       legacy &&
@@ -90,8 +88,7 @@ export default {
       commonjs(),
     ],
     external: Object.keys(pkg.dependencies).concat(
-      require("module").builtinModules ||
-        Object.keys(process.binding("natives"))
+      require("module").builtinModules
     ),
 
     preserveEntrySignatures: "strict",

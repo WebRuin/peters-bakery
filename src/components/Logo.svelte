@@ -1,19 +1,23 @@
 <style>
   .logo {
     position: absolute;
-    top: 50%;
+    top: 1.35rem;
     left: 50%;
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    color: var(--darkTeal);
+    color: var(--white);
     border: 2px solid var(--white);
-    box-shadow: 0 0 0 5px var(--hotPink), 0 0 0 10px var(--teal),
-      0 0 0 15px var(--white);
-    margin-top: -150px;
+    box-shadow: 0 0 0 5px var(--hotPink), 0 0 0 10px var(--gold),
+      0 0 0 15px var(--darkTeal);
     margin-left: -150px;
     align-items: center;
-    background-color: var(--gold);
+    background: linear-gradient(
+        0deg,
+        rgba(27, 123, 114, 0.5),
+        rgba(27, 123, 114, 0.5)
+      ),
+      url("https://res.cloudinary.com/tihos/image/upload/w_300,c_fill,ar_1:1,g_auto,r_max,/v1596476940/peters-bakery/cupcake-_storefront.jpg");
   }
 
   p {
@@ -25,7 +29,7 @@
   .wrapper {
     position: relative;
     width: 65%;
-    margin: 1.25rem auto 1rem auto;
+    margin: 0.25rem auto 1rem auto;
   }
 
   .est,
@@ -45,7 +49,7 @@
   }
 
   .est {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     margin-bottom: -14px;
   }
 

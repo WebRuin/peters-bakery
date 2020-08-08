@@ -1,14 +1,10 @@
-<script>
-  export let wrap;
-</script>
-
 <style>
   .grid {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
     min-height: 500px;
-    padding: 1rem 250px 1em 500px;
+    padding: 1rem 100px 1em 650px;
   }
   @media (max-width: 1000px) {
     .grid {
@@ -19,6 +15,6 @@
   }
 </style>
 
-<div class="grid {wrap ? 'wrap' : ''}">
+<section class="grid">
   <slot />
-</div>
+</section>

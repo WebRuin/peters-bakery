@@ -6,14 +6,19 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    color: var(--darkTeal);
-    border: 3px solid var(--white);
-    box-shadow: 0 0 0 3px var(--hotPink), 0 0 0 6px var(--teal),
-      0 0 0 9px var(--white);
+    color: var(--gold);
+    border: 1px solid var(--white);
+    box-shadow: 0 0 0 3px var(--hotPink), 0 0 0 5px var(--gold),
+      0 0 0 7px var(--darkTeal);
     margin-top: -75px;
     margin-left: -75px;
     align-items: center;
-    background-color: var(--gold);
+    background: linear-gradient(
+        0deg,
+        rgba(27, 123, 114, 0.5),
+        rgba(27, 123, 114, 0.5)
+      ),
+      url("https://res.cloudinary.com/tihos/image/upload/w_150,c_fill,ar_1:1,g_auto,r_max,/v1596476940/peters-bakery/cupcake-_storefront.jpg");
   }
 
   p {
@@ -26,28 +31,6 @@
     position: relative;
     width: 65%;
     margin: 0.625rem auto 0.5rem auto;
-  }
-  .wrapper::before {
-    display: block;
-    position: relative;
-    content: "";
-    top: -2px;
-    left: 50%;
-    width: 60px;
-    height: 3px;
-    margin-left: -30px;
-    background-color: var(--white);
-  }
-  .wrapper::after {
-    display: block;
-    position: relative;
-    content: "";
-    bottom: -2px;
-    left: 50%;
-    width: 60px;
-    height: 3px;
-    margin-left: -30px;
-    background-color: var(--white);
   }
 
   .est,
