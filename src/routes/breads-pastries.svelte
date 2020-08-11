@@ -1,4 +1,5 @@
 <script>
+  import H1 from "../components/H1.svelte";
   import H2 from "../components/H2.svelte";
   import PageWrapper from "../components/PageWrapper.svelte";
   import Aside from "../components/Aside.svelte";
@@ -23,8 +24,10 @@
   <title>Peter's Bakerey 🍩 Breads & Pastries</title>
 </svelte:head>
 
-<PageWrapper title="Breads & Pastries">
+<PageWrapper title="">
   <Aside {images} />
+
+  <H1>Breads & Pastries</H1>
   <div>
     <H2>Breads</H2>
     <ul>

@@ -1,9 +1,5 @@
 <script>
-  import { onMount } from "svelte";
-  import H1 from "../components/H1.svelte";
   import Grid from "../components/Grid.svelte";
-
-  export let title;
 </script>
 
 <style>
@@ -27,7 +23,6 @@
 </style>
 
 <article class="page-wrapper">
-  <H1>{title}</H1>
   <Grid>
     <slot />
   </Grid>
