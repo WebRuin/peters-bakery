@@ -36,7 +36,7 @@
 <PageWrapper>
   <Aside {images} />
 
-  <H1>Peter's Bakery</H1>
+  
   <figure>
     <img
       src="https://res.cloudinary.com/tihos/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,/v1596476940/peters-bakery/cupcake-_storefront.jpg"
